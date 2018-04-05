@@ -1,0 +1,445 @@
+/*---------------Fonts---------------------*/
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Light.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Regular.ttf);
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Bold.ttf);
+    font-weight: 800;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------Basic Rules------------------*/
+body, html {
+  width: 100%;
+  font-family: 'Quicksand', 'Helvetica' , sans-serif;
+}
+
+body {
+  background: #d8d8d8;
+  padding-top: 133px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-transition: top 0.4s;
+  -o-transition: top 0.4s;
+  transition: top 0.4s;
+}
+
+/*---------infobar-------------*/
+
+#infobar {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  padding: 0 10px;
+  line-height: 2em;
+  background: #1f1f26;
+  color: #d8d8d8;
+  font-family: 'Quicksand', 'Helvetica' , sans-serif;
+}
+
+.address, .tel, .opening {
+  flex-basis: 33%;
+  font-size: 12px;
+}
+
+.address {
+  text-align: left;
+}
+
+.opening {
+  text-align: center;
+}
+
+.tel {
+  text-align: right;
+}
+
+/*----------Navigation-----------*/
+
+nav {
+  padding: 0 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  padding: 30px 0;
+  line-height: 36px;
+}
+
+.hv:hover a, nav li.active a{
+  color: #ff4646;
+  font-weight: 400;
+}
+
+nav a {
+  padding: 10px;
+  font-family: 'Quicksand', 'Helvetica' , sans-serif;
+  font-weight: 400;
+  color: #1f1f1f;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav li:nth-child(n+3) a{
+  border-left: 1px solid #d8d8d8;;
+}
+
+nav li::after{
+  content: '';
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: -31px;
+  height: 4px;
+  width: 0;
+  background: #ff4646;
+  transition: none;
+}
+
+.hv:hover::after, nav li.active::after {
+  width: 100%;
+  transition: width 500ms ease-out;
+}
+
+h1 {
+  font-family: 'sansation';
+  font-size: 32px;
+  color: #1f1f26;
+  margin-left: 30px;
+}
+#h1a {
+}
+
+#h1b {
+  color: #ff4646;
+  position: relative;
+
+}
+
+@media screen and (max-width: 920px) {
+  h1 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  #nav_sm {
+    display: none;
+  }
+
+  #nav_lg {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 839px) {
+    #nav_sm {
+    display: block;
+  }
+
+  #nav_lg {
+    display: none;
+  }
+}
+/*-----------------Cover----------------------*/
+
+#header1 {
+  width: 100%;
+  height: auto;
+}
+
+
+section {
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Open-sans', 'Helvetica' , sans-serif;
+  text-transform: uppercase;
+  line-height: 3em;
+  color: #134368;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Open-sans', 'Helvetica' , sans-serif;
+  line-height: 1.6em;
+}
+
+.services {
+  width: 600px;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services li {
+  display: block;
+  width: 108px;
+  padding-top: 3px;
+  margin: 20px 20px 40px;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background: #134368;
+}
+
+.services img {
+  background: #134368;
+  height: auto;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.services h4::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 5px;
+  height: 92px;
+  width: 92px;
+  border: 3px solid #134368;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.services li:hover h4::before {
+  top: -3px;
+  left: -2px;
+  height: 106px;
+  width: 106px;
+}
+
+#offers {
+  width: 100%;
+  font-family: 'Quicksand', 'Helvetica' , sans-serif;
+}
+
+.offers {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offers>li {
+  width: 20%;
+  min-width: 250px;
+  margin: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: .3s ease-out all;
+}
+
+.offers>li:hover {
+  box-shadow: 0 7px 24px 0 rgba(110, 123, 157, 0.42);
+
+}
+
+.offers>li:hover h3{
+  background: #ff4646;
+}
+
+h3 {
+  border-radius: 12px 12px 0  0;
+  background: #134368;
+  line-height: 3em;
+  color: #fff;
+  font-family: 'Quicksand', 'Helvetica' , sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 2em;
+}
+
+h5::before {
+  content: "£";
+  vertical-align: baseline;
+  font-size: 18px;
+}
+
+.book {
+  padding: 12px;
+  border-radius: 20px;
+  background: #134368;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  transition: background 0.3s;
+}
+
+.book:hover {
+  background: #ff4646;
+}
+
+.offer {
+  padding: 10px 0 40px;;
+  list-style-type: none;
+  line-height: 2.5em;
+}
+
+.offers svg {
+  color: #134368;
+  margin-right: 16px;
+}
+
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+
+#contact {
+  background: #134368;
+  padding: 0;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content:space-around;
+}
+
+.footer {
+  width: 30%;
+  padding: 20px 0;
+}
+
+h6 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.7em;
+  font-weight: 600;
+}
+
+hr {
+  height: 2px;
+  width: 45px;
+  background: #ff4646;
+  border: none;
+  border-top: 1px solid #ff4646;
+  text-align: left;
+  margin: 0 0 25px;;
+}
+
+footer p, footer pre {
+  text-indent: 0;
+  text-align: left;
+  line-height: 1.4em;
+}
+
+span.day {
+  color: #2ea1db;
+  text-transform: uppercase;
+}
+
+.social {
+  text-align: left;
+  line-height: 2em;
+}
+
+.social svg {
+  color: #2ea1db;
+  margin-right: 10px;
+}
