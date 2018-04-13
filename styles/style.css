@@ -193,7 +193,7 @@ header {
 #infobar {
   display: flex;
   flex-basis: 100%;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 10px;
   line-height: 2em;
   background: #1f1f26;
@@ -204,8 +204,8 @@ header {
 .address,
 .tel,
 .opening {
-  flex-basis: 33%;
   font-size: 12px;
+  margin: 3px;
 }
 
 .address {
@@ -218,6 +218,12 @@ header {
 
 .tel {
   text-align: right;
+}
+
+@media screen and (max-width: 610px) {
+  #infobar {
+    display: none;
+  }
 }
 
 /*----------Navigation-----------*/
