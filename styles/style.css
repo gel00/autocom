@@ -176,6 +176,7 @@ body {
 }
 
 header {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -410,7 +411,7 @@ p {
 #offers {
   width: 100%;
   font-family: 'Quicksand', 'Helvetica', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .offers {
@@ -422,8 +423,9 @@ p {
 
 .offers > li {
   width: 20%;
-  max-width: 250px;
-  margin: 15px;
+  min-width: 220px;
+  max-width: 302px;
+  margin: 0.7em;
   background: #fff;
   border-radius: 10px;
   box-shadow: none;
@@ -451,20 +453,20 @@ h3 {
   transition: background 0.3s;
 }
 
-h5 {
+.price {
   font-size: 1.2em;
-  line-height: 2em;
+  line-height: 3em;
 }
 
-h5::before {
+.price::before {
   content: "£";
   vertical-align: baseline;
   font-size: 1em;
 }
 
 .book {
-  padding: 12px;
-  border-radius: 20px;
+  padding: 1em;
+  border-radius: 1.5em;
   background: #134368;
   color: #fff;
   text-transform: uppercase;
@@ -478,21 +480,28 @@ h5::before {
 }
 
 .offer {
+  margin: 1em 1em 2em;
   font-size: 1em;
-  padding: 10px 0 40px;
-  ;
   list-style-type: none;
-  line-height: 2.5em;
+  line-height: 2.1em;
+  text-align: center;
 }
+
 
 .offers svg {
   color: #134368;
-  margin-right: 16px;
+  margin: 0 1em 0 0;
 }
 
 @media screen and (max-width: 1200px) {
   #offers {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .offers > li {
+    width: 50%;
   }
 }
 
@@ -611,16 +620,17 @@ span.day {
 /*---------------------------------------------------*/
 
 .plx {
-  background-position: 50% 0;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-origin: content-box;
+  background-size: 100%;
   margin: 0 auto;
   width: 100%;
   padding: 0;
 }
 
 #plx1 {
-  height: 200px;
+  height: 35vh;
   background-image: url("../img/header.jpg");
 }
