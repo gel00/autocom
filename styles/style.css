@@ -634,3 +634,10 @@ span.day {
   height: 35vh;
   background-image: url("../img/header.jpg");
 }
+
+@media screen and (max-width: 1090px) {
+  #plx1 {
+    background-size: 150%;
+    height: 30vh
+  }
+}
