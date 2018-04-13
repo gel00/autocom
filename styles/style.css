@@ -230,6 +230,7 @@ nav {
   font-size: 1em;
   padding: 0 1.7em;
   margin: 0 1.8em;
+  transition: height 0.5s;
 }
 
 nav ul {
@@ -344,6 +345,7 @@ h1 {
 
   #nav_lg {
     display: none;
+
   }
 }
 
