@@ -229,7 +229,7 @@ nav {
   float: left;
   font-size: 1em;
   padding: 0 1.7em;
-  margin: 0 1.8em;
+  margin: 0;
   transition: height 0.5s;
 }
 
@@ -378,8 +378,20 @@ p {
   line-height: 1.6em;
 }
 
+/*---------------services--------------------*/
+
+#services {
+  background: #fff;
+}
+
+#services p {
+  color: #808080;
+  margin: 0 0 15px;
+}
+
 .services {
-  width: 600px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   list-style-type: none;
   display: flex;
@@ -389,48 +401,61 @@ p {
 
 .services li {
   display: block;
-  width: 108px;
-  padding-top: 3px;
-  margin: 20px 20px 40px;
-  box-sizing: border-box;
+  width: 25%;
+  margin: 20px 0;
+  padding: 0 0.5em;
   box-sizing: border-box;
   position: relative;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  background: #134368;
+.fa-plus {
+  position: absolute;
+  top: 7px;
+  ;
+  margin: 0 15px;
+  color: #ff4646;
 }
+
+.icon {
+  width: 106px;
+  height: 106px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.services h4 {
+  line-height: 2em;
+  position: relative;
+}
+
+
 
 .services img {
   background: #134368;
   height: auto;
   width: 100px;
+  margin: 0 auto;
   border-radius: 50%;
 }
 
-.services h4::before {
+.circle::before {
   content: "";
   display: block;
   position: absolute;
-  z-index: -1;
-  top: 4px;
-  left: 5px;
-  height: 92px;
-  width: 92px;
+  z-index: 10;
+  top: 0;
+  left: 3px;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100px;
   border: 3px solid #134368;
   border-radius: 50%;
   transition: all 0.2s;
 }
 
-.services li:hover h4::before {
-  top: -3px;
-  left: -2px;
-  height: 106px;
-  width: 106px;
+.services li:hover .circle::before {
+  transform: scale(1.15, 1.15);
 }
 
 /*----------------Offers----------------------*/
