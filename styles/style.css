@@ -396,6 +396,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 7px 24px 0 rgba(110, 123, 157, 0.42);
+  background: #fff;
 }
 
 #services .heading {
@@ -418,20 +419,20 @@ h2 {
 .content {
   display: flex;
   box-sizing: border-box;
-  background: #fff;
   width: 100%;
+  max-width: 960px;
   padding: 0 30px;
+  margin: 0 auto;
 }
 
 .services {
   background: #fff;
-  max-width: 1200px;
   width: 60%;
   margin: 0 auto;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
 }
 
