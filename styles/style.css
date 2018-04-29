@@ -498,12 +498,13 @@ h2 {
 
 .services {
   background: #fff;
-  width: 60%;
+  width: 100%;
+  max-width: 680px;
   margin: 0 auto;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 
@@ -519,6 +520,7 @@ h2 {
 
 .fa-plus,
 .fa-window-minimize {
+  display: none;
   margin-left: 10px;
   color: #ff4646;
 }
@@ -560,6 +562,7 @@ h2 {
 }
 
 #si {
+  display: none;
   box-sizing: border-box;
   height: 100%;
   width: 40%;
