@@ -32,12 +32,12 @@
     <nav>
       <div id="nav_lg">
         <ul>
-          <li class="active"><a href="">Home</a></li>
+          <li class="active"><a href="#">Home</a></li>
           <li class="hv"><a href="#services">Services</a></li>
-          <li class="hv"><a href="">Our Team</a></li>
-          <li class="hv"><a href="">Testimonials</a></li>
+          <li class="hv"><a href="#team">Our Team</a></li>
+          <li class="hv"><a href="#review">Testimonials</a></li>
           <li class="hv"><a href="#contact">Contacts</a></li>
-          <li class="hv"><a href="">Offers</a></li>
+          <li class="hv"><a href="#offers">Offers</a></li>
         </ul>
       </div>
     </nav>
@@ -251,7 +251,10 @@
   </section>
   <script>
     window.onscroll = function() {
-      myFunction()
+      myFunction();
+    };
+    document.body.onhashchange = function() {
+      myFunction();
     };
     var nav = document.getElementById("header"),
       myFunction = (function() {
