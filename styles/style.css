@@ -527,12 +527,29 @@ h2 {
 
 .services > li {
   display: block;
-  width: 170px;
   margin: 20px 0;
   padding: 10px 0.5em;
   box-sizing: border-box;
   position: relative;
   background: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  width: 160px;
+}
+
+
+@media screen and (max-width: 599px) {
+  .services > li {
+    width: 33%;
+  }
+  .icon {
+    -ms-transform: scale(0.8, 0.8);
+    /* IE 9 */
+    -webkit-transform: scale(0.8, 0.8);
+    /* Safari */
+    transform: scale(0.8, 0.8);
+  }
 }
 
 .fa-plus,
