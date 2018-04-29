@@ -448,6 +448,7 @@ h2 {
 
 .services > li {
   display: block;
+  width: 170px;
   margin: 20px 0;
   padding: 10px 0.5em;
   box-sizing: border-box;
@@ -628,15 +629,12 @@ h3 {
   background-color: grey;
 }
 
-margin-right: 10px;
-}
-
 /*--------------Our Team----------*/
 
 #team {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   background: #fff;
   font-size: 15px;
 }
@@ -646,17 +644,16 @@ margin-right: 10px;
 }
 
 .heading h2 {
+  display: block;
   font-size: 1.5em;
-  display: inline-block;
-  margin: 0 auto;
 }
 
 .staff {
-  box-sizing: border-box;
-  width: 400px;
-  max-width: 50%;
-  min-width: 300px;
-  padding: 5%;
+  margin: 0 35px;
+  padding: 0;
+  min-width: 250px;
+  width: 25%;
+  max-width: 350px;
 }
 
 .staff img {
