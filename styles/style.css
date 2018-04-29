@@ -401,8 +401,52 @@ p {
 /*-----------testimonials------------*/
 
 #review {
-
   background: #fff;
+}
+
+#review ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  ;
+}
+
+.review svg {
+  position: relative;
+  height: 40px;
+  padding: 0 10px;
+  color: #134368;
+}
+
+.review img {
+  border-radius: 50%;
+}
+
+.review h4 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 400;
+  color: #6e6e6e;
+  text-transform: uppercase;
+}
+
+blockquote {
+  text-align: left;
+  color: #6e6e6e;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 960px) {
+  .review {
+    width: 25%;
+    max-width: 300px;
+  }
 }
 
 /*---------------services--------------------*/
@@ -623,13 +667,19 @@ h3 {
   }
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1040px) and (min-width: 730px) {
   .offers > li {
     width: 50%;
   }
 }
 
-/*------------------------------------------*/
+@media screen and (max-width: 560px) {
+  .offers > li {
+    width: 90%;
+  }
+}
+
+/*-------------------Map-----------------------*/
 
 #map {
   width: 100%;
