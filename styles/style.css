@@ -186,6 +186,16 @@ header {
   font-size: 18px;
 }
 
+hr {
+  width: 8%;
+  margin: 10px auto 25px;
+  height: 2px;
+  width: 45px;
+  background: #ff4646;
+  border: none;
+  border-top: 1px solid #ff4646;
+}
+
 /*---------infobar-------------*/
 
 #infobar {
@@ -618,54 +628,7 @@ h3 {
   background-color: grey;
 }
 
-#contact {
-  background: #134368;
-  padding: 0;
-  color: #fff;
-}
-
-footer {
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer {
-  width: 30%;
-  padding: 20px 0;
-}
-
-
-hr {
-  height: 2px;
-  width: 45px;
-  background: #ff4646;
-  border: none;
-  border-top: 1px solid #ff4646;
-  text-align: left;
-  margin: 0 0 25px;
-  ;
-}
-
-footer p,
-footer pre {
-  text-indent: 0;
-  text-align: left;
-  line-height: 1.4em;
-}
-
-span.day {
-  color: #2ea1db;
-  text-transform: uppercase;
-}
-
-.social {
-  text-align: left;
-  line-height: 2em;
-}
-
-.social svg {
-  color: #2ea1db;
-  margin-right: 10px;
+margin-right: 10px;
 }
 
 /*--------------Our Team----------*/
@@ -718,11 +681,6 @@ span.day {
   color: #ff4646;
 }
 
-.heading hr {
-  width: 8%;
-  margin: 0 auto 25px;
-}
-
 /*---------------------------------------------------*/
 
 .plx {
@@ -747,3 +705,73 @@ span.day {
     height: 350px;
   }
 }
+
+/*--------Footer----------*/
+
+#contact {
+  background: #134368;
+  padding: 0;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    width: 30%;
+  }
+
+  h6 {
+    text-align: left;
+  }
+
+  footer hr {
+    margin-left: 0;
+  }
+
+  footer p,
+  footer pre,
+  .social {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .footer {
+    width: 400px;
+  }
+
+  footer p,
+  footer pre,
+  .social {
+    text-align: center;
+  }
+}
+
+footer p,
+footer pre,
+.social {
+  text-indent: 0;
+  line-height: 1.4em;
+}
+
+span.day {
+  color: #2ea1db;
+  text-transform: uppercase;
+}
+
+.social {
+  line-height: 2em;
+}
+
+.social svg {
+  color: #2ea1db;
