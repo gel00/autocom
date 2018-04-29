@@ -176,6 +176,9 @@ body {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   box-sizing: border-box;
   width: 100%;
   background-color: #f0f0f0;
@@ -238,7 +241,6 @@ hr {
 /*----------Navigation-----------*/
 
 nav {
-  float: left;
   font-size: 1em;
   padding: 0 1.7em;
   margin: 0;
@@ -296,7 +298,6 @@ nav li.active::after {
 }
 
 h1 {
-  float: left;
   font-family: 'sansation';
   font-size: 1.8em;
   line-height: 2.84em;
@@ -335,6 +336,7 @@ h1 {
 
   #nav_lg {
     display: block;
+    margin: 0 auto;
   }
 }
 
@@ -357,7 +359,11 @@ h1 {
 
   #nav_lg {
     display: none;
+    margin: 0 auto;
+  }
 
+  nav ul {
+    justify-content: center;
   }
 }
 
@@ -692,14 +698,31 @@ h3 {
 }
 
 #plx1 {
-  height: 400px;
   background-image: url("../img/header.jpg");
+  height: 420px;
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (min-width: 1350px) {
   #plx1 {
-    background-size: 150%;
-    height: 350px;
+    background-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1130px) and (max-width: 1349px) {
+  #plx1 {
+    background-size: 130%;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1129px) {
+  #plx1 {
+    background-size: 160%;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  #plx1 {
+    background-size: 250%;
   }
 }
 
