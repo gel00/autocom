@@ -304,6 +304,7 @@ h1 {
   color: #1f1f26;
   margin: 0 0.95em;
   text-align: center;
+  position: relative;
 }
 
 #h1a {}
@@ -341,9 +342,6 @@ h1 {
 }
 
 @media screen and (max-width: 854px) {
-  #nav_sm {
-    display: block;
-  }
 
   h1 {
     box-sizing: border-box;
@@ -353,7 +351,11 @@ h1 {
   }
 
   #nav_sm {
-    display: inline-block;
+    display: block;
+    position: absolute;
+    z-index: 21;
+    top: 0;
+    right: 0;
     margin: 0 2em;
   }
 
