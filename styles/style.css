@@ -250,6 +250,7 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 nav li {
@@ -402,6 +403,7 @@ p {
 
 #review {
   background: #fff;
+  font-size: 16px;
 }
 
 #review ul {
@@ -416,6 +418,10 @@ p {
   ;
 }
 
+.person {
+  width: 200px;
+}
+
 .review svg {
   position: relative;
   height: 40px;
@@ -424,6 +430,7 @@ p {
 }
 
 .review img {
+  margin: 0 auto;
   border-radius: 50%;
 }
 
@@ -451,10 +458,20 @@ blockquote {
 }
 
 @media screen and (max-width: 959px) {
+
+  #review {
+    font-size: 14px;
+  }
+
   .review {
     width: 100%;
     display: flex;
     align-items: flex-start;
+  }
+
+  .review img {
+    height: 60px;
+    width: auto;
   }
 }
 
@@ -748,6 +765,7 @@ h3 {
   color: #ff4646;
 }
 
+
 /*---------------------------------------------------*/
 
 .plx {
@@ -786,6 +804,7 @@ h3 {
 
 @media screen and (max-width: 849px) {
   #plx1 {
+    height: 280px;
     background-size: 250%;
   }
 }
