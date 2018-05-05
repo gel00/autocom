@@ -516,7 +516,7 @@ h2 {
 .services {
   background: #fff;
   width: 100%;
-  max-width: 680px;
+  max-width: 1200px;
   margin: 0 auto;
   list-style-type: none;
   display: flex;
@@ -527,6 +527,7 @@ h2 {
 
 .services > li {
   display: block;
+  width: 25%;
   margin: 20px 0;
   padding: 10px 0.5em;
   box-sizing: border-box;
