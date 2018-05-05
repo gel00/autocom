@@ -499,9 +499,10 @@ h2 {
   padding: 0 30px;
 }
 
-#services p {
-  font-size: 1.1em;
-  padding: 30px;
+.service p {
+ display: none;
+  color: #fff;
+  transition: all 0.8s;0px;
 }
 
 .content {
@@ -526,13 +527,14 @@ h2 {
 }
 
 .services > li {
-  display: block;
-  width: 25%;
-  margin: 20px 0;
-  padding: 10px 0.5em;
-  box-sizing: border-box;
   position: relative;
+  box-sizing: border-box;
+  height: 150px;
+  width: 120px;
+  margin: 10px;
   background: #fff;
+  border: 5px solid #fff;
+  transition: all 1s;
 }
 
 @media screen and (min-width: 600px) {
@@ -561,25 +563,108 @@ h2 {
 }
 
 .icon {
-  width: 106px;
-  height: 106px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  height: 100px;
+  width: 100px;
+  background: #134368;
+  border-radius: 50%;
+  transition: all 0.2s;
+  z-index: 10;
+  overflow: hidden;
+  transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .services h4 {
-  line-height: 2em;
-  position: relative;
+   position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: helvetica, sans-serif;
+  font-size: 18px;
+  left:0px;
+  bottom: 0px; line-height: 2em;
 }
 
-.services img {
-  background: #134368;
-  height: auto;
-  width: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
+.service.open h4 {
+  z-index: 10;
+  top: 0;
+  left:0;
+  animation-name: show;
+  animation-duration: 0.5s;
 }
+
+@keyframes show {
+  0%, 20%{
+    opacity: 0;
+    left:100%;
+  }
+  100%{
+    opacity: 1;
+    left:0;
+  }
+}
+
+.mask1 {
+  position: absolute;
+  top: -55px;
+  left: -55px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.service.open .mask1 {
+  z-index: 11;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+/*.service:nth-child(4n+1).open .mask1 {
+  left: -20px;
+}
+
+.service:nth-child(4n+2).open .mask1 {
+  left: -55px;
+}
+
+.service:nth-child(4n+3).open .mask1 {
+  left: -55px;
+}
+
+.service:nth-child(4n).open .mask1 {
+  left: -90px;
+}*/
+
+.service.open .icon {
+  transform: scale(3.1);
+  background: #fff;
+}
+
+
+.services img {
+  height: 100px;
+  width: 100px;
+}
+
+.service.open p {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 15px;
+  top: 20px;
+  left: 0;
+  font-size: 14px;
+  color: #000;
+  animation-name: show;
+  animation-duration: 0.5s;
+}
+
 
 .circle::before {
   content: "";

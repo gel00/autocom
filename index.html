@@ -133,61 +133,85 @@
     </div>
     <div class="content">
       <ul class="services">
-        <li>
-          <div class="icon">
-            <img src="img/engine.png" alt="engine icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/engine.png" alt="engine icon">
+              <div class="circle"></div>
+            </div>
+            <h4>Engine<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>Engine<i class="fas fa-plus"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/tyres.png" alt="tyres icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/tyres.png" alt="tyres icon">
+              <div class="circle"></div>
+            </div>
+            <h4>Tyres<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>Tyres<i class="fas fa-plus"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/ecu.png" alt="ecu icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/ecu.png" alt="ECU icon">
+              <div class="circle"></div>
+            </div>
+            <h4>ECU<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>ECU<i class="fas fa-window-minimize" data-fa-transform="up-6"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/clutch.png" alt="clutch icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/clutch.png" alt="clutch icon">
+              <div class="circle"></div>
+            </div>
+            <h4>Clutch<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>Clutch<i class="fas fa-plus"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/suspension.png" alt="suspension icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/suspension.png" alt="suspension icon">
+              <div class="circle"></div>
+            </div>
+            <h4>Suspension<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>Suspension<i class="fas fa-plus"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/exhaust.png" alt="exhaust icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/exhaust.png" alt="exhaust system icon">
+              <div class="circle"></div>
+            </div>
+            <h4>Exhaust system<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>Exhaust System<i class="fas fa-plus"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/breaks.png" alt="breaks icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/breaks.png" alt="breaks icon">
+              <div class="circle"></div>
+            </div>
+            <h4>Breaks<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>Breaks<i class="fas fa-plus"></i></h4>
         </li>
-        <li>
-          <div class="icon">
-            <img src="img/mot.png" alt="mot icon">
-            <div class="circle"></div>
+        <li class="service">
+          <div class="mask1">
+            <div class="icon">
+              <img src="img/mot.png" alt="MOT icon">
+              <div class="circle"></div>
+            </div>
+            <h4>MOT<i class="fas fa-plus"></i></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laboriosam consequuntur error quaerat alias sit quis beatae eum facere itaque rem.</p>
           </div>
-          <h4>MOT<i class="fas fa-plus"></i></h4>
         </li>
       </ul>
       <div id="si">
@@ -296,6 +320,37 @@
     $("#nav_sm").click(function() {
       $("#nav_lg").slideToggle();
     });
+
+    var $icons = $(".icon");
+    initOpen();
+
+    function initOpen() {
+      $icons.on("click", function(e) {
+        e.stopPropagation();
+        open(e.target);
+        initClose(e.target);
+        $icons.off("click");
+      });
+    }
+
+    function initClose(elem) {
+      $("body").on("click", function(e) {
+        e.stopPropagation();
+        if (!$(e.target).parents().addBack().is($(elem).parents(".service"))) {
+          close(elem);
+          initOpen();
+          $("body").off("click");
+        }
+      });
+    }
+
+    function open(elem) {
+      $(elem).parents(".service").addClass("open");
+    }
+
+    function close(elem) {
+      $(elem).parents(".service").removeClass("open");
+    }
 
     function initMap() {
       var acg = {
