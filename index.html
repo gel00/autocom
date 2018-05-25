@@ -99,28 +99,28 @@
           <img src="img/review1.jpg" alt="picture of happy owner">
           <h4>Cameron Welch</h4>
         </div>
-        <blockquote><i class="fas fa-quote-right fa-lg"></i>Sometimes my car suffers any kind of damage or malfunctioning! But when I took my car to this repair service and they were amazing!</blockquote>
+        <blockquote><i class="fas fa-quote-right fa-lg"></i> Sometimes my car suffers any kind of damage or malfunctioning! But when I took my car to this repair service and they were amazing!</blockquote>
       </li>
       <li class="review">
         <div class="person">
           <img src="img/review2.jpg" alt="picture of happy owner">
           <h4>Gary Owen</h4>
         </div>
-        <blockquote><i class="fas fa-quote-right fa-lg"></i>The moment when your car stops in the middle of the road, because the ignition just died is a very disturbing one…</blockquote>
+        <blockquote><i class="fas fa-quote-right fa-lg"></i> The moment when your car stops in the middle of the road, because the ignition just died is a very disturbing one…</blockquote>
       </li>
       <li class="review">
         <div class="person">
           <img src="img/review3.jpg" alt="picture of happy owner">
           <h4>Troy Barnett</h4>
         </div>
-        <blockquote><i class="fas fa-quote-right fa-lg"></i>I am a returning customer. During the last few years I’ve been servicing 2 of my 3 cars here, and I had never had a single problem!</blockquote>
+        <blockquote><i class="fas fa-quote-right fa-lg"></i> I am a returning customer. During the last few years I’ve been servicing 2 of my 3 cars here, and I had never had a single problem!</blockquote>
       </li>
       <li class="review">
         <div class="person">
           <img src="img/review4.jpg" alt="picture of happy owner">
           <h4>Gene Davis</h4>
         </div>
-        <blockquote><i class="fas fa-quote-right fa-lg"></i>Recently these guys saved me from a sure disaster. Just as I was about to drive off to work from my garage!</blockquote>
+        <blockquote><i class="fas fa-quote-right fa-lg"></i> Recently these guys saved me from a sure disaster. Just as I was about to drive off to work from my garage!</blockquote>
       </li>
     </ul>
   </section>
@@ -347,35 +347,41 @@
       $("#nav_lg").slideToggle();
     });
 
-    var $icons = $(".icon");
+    var $services = $(".service"),
+        $icons = $services.find(".icon"),
+        $svgs = $services.find("i");
     initOpen();
 
     function initOpen() {
-      $icons.on("click", function(e) {
+      var $elems = $icons.add($svgs)
+      $elems.on("click", function(e) {
         e.stopPropagation();
         open(e.target);
+        $elems.off("click");
         initClose(e.target);
-        $icons.off("click");
       });
     }
 
     function initClose(elem) {
-      $("body").on("click", function(e) {
+      var $elems = $(elem).parents(".service").find("i").add("body");
+      $elems.on("click", function(e) {
+        console.log(e.target);
         e.stopPropagation();
-        if (!$(e.target).parents().addBack().is($(elem).parents(".service"))) {
+        if (!$(e.target).parents().addBack().is($(elem).parents(".service")) || $(e.target).hasClass("fa-window-close")) {
+          console.log("click");
           close(elem);
+          $elems.off("click");
           initOpen();
-          $("body").off("click");
         }
       });
     }
 
     function open(elem) {
-      $(elem).parents(".service").addClass("open");
+      $(elem).parents(".service").addClass("open").find("i").removeClass("fa-plus").addClass("fa-window-close");
     }
 
     function close(elem) {
-      $(elem).parents(".service").removeClass("open");
+      $(elem).parents(".service").removeClass("open").find("i").removeClass("fa-window-close").addClass("fa-plus");
     }
 
     function initMap() {
