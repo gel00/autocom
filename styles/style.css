@@ -945,7 +945,7 @@ footer {
   }
 
   footer p,
-  footer pre,
+  #oppening,
   .social {
     text-align: left;
   }
@@ -957,7 +957,7 @@ footer {
   }
 
   footer p,
-  footer pre,
+  #oppening,
   .social {
     text-align: center;
   }
@@ -973,7 +973,6 @@ footer p,
 #oppening {
   text-transform: uppercase;
   width: 100%;
-  text-align: left;
 }
 
 .day {
