@@ -914,7 +914,7 @@ h3 {
 
 /*--------Footer----------*/
 
-#contact {
+#contact, .social a {
   background: #134368;
   padding: 0;
   color: #fff;
@@ -964,15 +964,20 @@ footer {
 }
 
 footer p,
-footer pre,
+#oppening,
 .social {
   text-indent: 0;
   line-height: 1.4em;
 }
 
-span.day {
-  color: #2ea1db;
+#oppening {
   text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+}
+
+.day {
+  color: #2ea1db;
 }
 
 .social {
@@ -981,3 +986,8 @@ span.day {
 
 .social svg {
   color: #2ea1db;
+}
+
+.social a {
+  text-decoration: none;
+}
